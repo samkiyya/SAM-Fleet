@@ -1,0 +1,4 @@
+fleet_client/node_modules
+server/node_modules
+server/.env
+fleet_client/.env.local

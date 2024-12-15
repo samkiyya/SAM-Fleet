@@ -14,7 +14,8 @@ The **Vehicle Management Dashboard** is a web application designed for fleet adm
 - Status indicators:
 
   - **Green**: Active
-  - **Red**: Under Maintenance
+  - **Yellow**: Under Maintenance
+  - **Red**: Inactive
 
 - Sorting by Last Updated, Mileage, or Fuel Level.
 
@@ -51,6 +52,7 @@ The **Vehicle Management Dashboard** is a web application designed for fleet adm
 
 - **Next.js (Typed)**
 - **TailwindCSS**
+- **shadcn** for ui elements
 - **Axios** for API integration
 
 ### Backend
@@ -80,10 +82,10 @@ Ensure you have the following installed on your system:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/yourusername/vehicle-management-dashboard.git
+$ git clone https://github.com/samkiyya/SAM-Fleet.git
 
 # Navigate to the project directory
-$ cd vehicle-management-dashboard
+$ cd SAM-Fleet
 ```
 
 ### Backend Setup
@@ -91,13 +93,13 @@ $ cd vehicle-management-dashboard
 1. Navigate to the backend directory:
 
    ```bash
-   cd server
+   $ cd server
    ```
 
 2. Install dependencies:
 
    ```bash
-    npm install
+    $ npm install
    ```
 
 3. Create a `.env` file in the backend directory with the following:
@@ -110,7 +112,8 @@ $ cd vehicle-management-dashboard
 4. Start the backend server:
 
    ```bash
-    npm start
+    $ npm start or
+    $ npm run dev
    ```
 
 ### Frontend Setup
@@ -118,25 +121,25 @@ $ cd vehicle-management-dashboard
 1. Navigate to the frontend directory:
 
    ```bash
-   cd fleet_client
+   $ cd fleet_client
    ```
 
 2. Install dependencies:
 
    ```bash
-   npm install
+   $ npm install
    ```
 
 3. Start the development server:
 
    ```bash
-   npm run dev
+   $ npm run dev
    ```
 
 4. Open your browser and navigate to:
 
    ```bash
-   http://localhost:3000
+   $ http://localhost:3000
    ```
 
 ---
@@ -169,13 +172,16 @@ vehicle-management-dashboard/
 │   ├── controllers/       # Controllers for API endpoints
 │   ├── models/            # Mongoose models
 │   ├── routes/            # API routes
-│   ├── app.js             # Main application setup
 │   └── server.js          # Server entry point
+│
 ├── fleet_client/          # Frontend (Typed Next.js)
 │   ├── components/        # Reusable UI components
-│   ├── pages/             # Next.js pages
+│   ├── app/               # Next.js pages
 │   ├── public/            # Static assets
-│   ├── styles/            # TailwindCSS styles
+│   ├── lib/               # api midlewares
+│   ├── types              # typescript interface for car
+│   ├── context/           # context of the app
+│   ├──.next/              # static outputs of the build for frontend
 │   └── tsconfig.json      # TypeScript configuration
 └── README.md              # Project documentation
 ```
@@ -188,6 +194,7 @@ vehicle-management-dashboard/
 - Notifications for maintenance schedules.
 - Predictive analytics for vehicle maintenance.
 - Companion mobile app with React Native.
+- Role based access | user management ...
 
 ---
 
@@ -207,6 +214,6 @@ Contributions are welcome! To contribute:
 
 For questions or feedback, reach out at:
 
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
+- **Email**: [samuelabera523@gmail.com](mailto:samuelabera523@gmail.com)
 
-- **GitHub**: [https://github.com/yourusername](https://github.com/yourusername)
+- **GitHub**: [samkiyya](https://github.com/samkiyya)
